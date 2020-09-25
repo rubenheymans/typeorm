@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "typeorm"
+  },
+  "targets": {
+    "typeorm": {
+      "hosting": {
+        "typeorm": [
+          "typeorm"
+        ]
+      }
+    }
   }
 }

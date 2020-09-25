@@ -9,4 +9,6 @@ typings/
 node_modules/
 
 firebase-debug.log
+firebase-debug.1.log
+firestore-debug.log
 ui-debug.log

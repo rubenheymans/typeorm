@@ -1,5 +1,5 @@
 import { ConnectionOptions, Connection, createConnection, getConnection } from 'typeorm';
-import 'reflect-metadata';
+// import 'reflect-metadata';
 
 // Will be true on deployed functions
 export const prod = process.env.NODE_ENV === 'production';
@@ -25,7 +25,7 @@ export const config: ConnectionOptions = {
     // synchronize: false,
     extra: {
       socketPath: '/cloudsql/typeorm:europe-west1:typeorm'
-    },
+    }
   })
 }
 

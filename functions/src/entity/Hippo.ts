@@ -1,4 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, BeforeInsert } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, BeforeInsert, OneToMany } from "typeorm";
+import { Hat } from "./Hat";
 
 @Entity()
 export class Hippo extends BaseEntity {
@@ -19,5 +20,8 @@ export class Hippo extends BaseEntity {
   addTimestamp() {
     this.createdAt = new Date();
   }
+
+  @OneToMany(type => Hat, hat => hat.owner)
+  hats: Hat[];
 
 }
